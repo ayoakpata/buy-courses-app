@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Coursesales from "./Coursesales";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    var courses = [
+      { name: "Complete javaScript", price: 200 },
+      { name: "Complete React", price: 50 },
+      { name: "Complete Node.Js", price: 90 },
+      { name: "Complete Angular", price: 100 },
+      { name: "Complete Vue", price: 120 }
+    ];
+
+    return (
+      <div className="App">
+        <div className="App-header">
+          <h2> start learning</h2>
+          <Coursesales items={courses} />
+        </div>
+      </div>
+    );
+  }
 }
-
 export default App;
